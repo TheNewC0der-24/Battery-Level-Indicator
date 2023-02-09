@@ -204,9 +204,22 @@ body {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-
+@media screen and (max-width: 320px) {
+  .battery-card {
+    zoom: 0.8;
+  }
+}
 
 /* For medium devices */
-
+@media screen and (min-width: 430px) {
+  .battery-card {
+    width: 312px;
+  }
+}
 
 /* For large devices */
+@media screen and (min-width: 1024px) {
+  .battery-card {
+    zoom: 1.5;
+  }
+}
