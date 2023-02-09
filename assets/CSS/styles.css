@@ -5,18 +5,18 @@
 :root {
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --gradient-color-red: linear-gradient(90deg, 
-                          hsl(7, 89%, 46%) 15%,
-                          hsl(11, 93%, 68%) 100%);
-  --gradient-color-orange: linear-gradient(90deg, 
-                           hsl(22, 89%, 46%) 15%,
-                           hsl(54, 90%, 45%) 100%);
-  --gradient-color-yellow: linear-gradient(90deg, 
-                           hsl(54, 89%, 46%) 15%,
-                           hsl(92, 90%, 45%) 100%);
-  --gradient-color-green: linear-gradient(90deg, 
-                          hsl(92, 89%, 46%) 15%,
-                          hsl(92, 90%, 68%) 100%);
+  --gradient-color-red: linear-gradient(90deg,
+      hsl(7, 89%, 46%) 15%,
+      hsl(11, 93%, 68%) 100%);
+  --gradient-color-orange: linear-gradient(90deg,
+      hsl(22, 89%, 46%) 15%,
+      hsl(54, 90%, 45%) 100%);
+  --gradient-color-yellow: linear-gradient(90deg,
+      hsl(54, 89%, 46%) 15%,
+      hsl(92, 90%, 45%) 100%);
+  --gradient-color-green: linear-gradient(90deg,
+      hsl(92, 89%, 46%) 15%,
+      hsl(92, 90%, 68%) 100%);
   --text-color: #fff;
   --body-color: hsl(0, 0%, 11%);
   --container-color: hsl(0, 0%, 9%);
@@ -54,7 +54,88 @@ body {
 }
 
 /*=============== BATTERY ===============*/
+.battery {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 0 1.5rem;
+}
 
+.battery-card {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  border-radius: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.battery-text {
+  margin-bottom: 0.5rem;
+}
+
+.battery-percentage {
+  font-size: var(--biggest-font-size);
+}
+
+.battery-status {
+  position: absolute;
+  bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  font-size: var(--smaller-font-size);
+}
+
+.battery-status i {
+  font-size: 1.25rem;
+}
+
+.battery-pill {
+  position: relative;
+  width: 75px;
+  height: 180px;
+  background-color: var(--container-color);
+  box-shadow: inset 20px 0 48px hsl(0, 0%, 16%),
+    inset -4px 12px 48px hsl(0, 0%, 56%);
+  border-radius: 3rem;
+  justify-self: flex-end;
+}
+
+.battery-level {
+  position: absolute;
+  inset: 2px;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+
+.battery-liquid {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 36px;
+  background: var(--gradient-color-red);
+  box-shadow: inset -10px 0 12px hsla(0, 0%, 0%, 0.1),
+    inset 12px 0 12px hsla(0, 0%, 0%, 0.15);
+  transition: 0.3s;
+}
+
+.battery-liquid::after {
+  content: "";
+  position: absolute;
+  height: 8px;
+  background: var(--gradient-color-red);
+  box-shadow: inset 0 -3px 6px hsla(0, 0%, 0%, 0.2);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: -4px;
+  border-radius: 50%;
+}
 
 /* Full battery icon color */
 
