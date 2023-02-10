@@ -1,0 +1,32 @@
+{
+    "name": "Battery Status Indicator",
+    "short_name": "Battery Status Indicator",
+    "theme_color": "#1c1c1c",
+    "background_color": "#171717",
+    "display": "standalone",
+    "scope": ".",
+    "start_url": ".",
+    "icons": [
+        {
+            "src": "Images/logo32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "Images/logo192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "Images/logo512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "Images/maskable.png",
+            "sizes": "196x196",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
